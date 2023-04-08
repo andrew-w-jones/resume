@@ -17,4 +17,4 @@ jobs:
       - name: Deploy site to S3 bucket
         run: |
           aws s3 sync ./public ${{ secrets.AWS_S3_BUCKET }} --delete
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*'
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
