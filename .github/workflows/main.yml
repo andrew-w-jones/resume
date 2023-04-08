@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy site to S3 bucket
-        run: aws s3 sync . ${{ secrets.AWS_S3_BUCKET }} --delete
+        run: aws s3 sync ./public ${{ secrets.AWS_S3_BUCKET }} --delete
