@@ -3,6 +3,9 @@
 <head>
     <link rel="stylesheet" href="sheets-of-paper-uslegal.css"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
 </head>
 
 <div id="header"></div>
@@ -121,4 +124,15 @@
 
   <br>
 </div>
+    <button id="btn"> PDF </button>
+
+    <script>
+        var button = document.getElementById("btn");
+        button.addEventListener("click", function() {
+            var doc = new jsPDF();
+            var pdf = document.querySelector(".page");
+            doc.fromHTML(pdf);
+            doc.save("AndrewJones.pdf");
+        });
+    </script>
 </html>
