@@ -3,8 +3,8 @@
 <head>
     <link rel="stylesheet" href="sheets-of-paper-uslegal.css"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
     </script>
 </head>
 <body>
@@ -124,15 +124,24 @@
 
   <br>
 </div>
-    <button id="btn"> PDF </button>
+    <button id="download-pdf"> Download PDF </button>
 
     <script>
         var button = document.getElementById("btn");
         button.addEventListener("click", function () {
-            var doc = new jsPDF();
-            var pdf = document.querySelector(".page");
-            doc.fromHTML(pdf);
-            doc.save("AndrewJones.pdf");
+            const element = document.getElementById('page');
+            const options = {
+                filename: 'AndrewJones.pdf',
+                margin: 0,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                }
+            };
+            html2pdf().set(options).from(element).save();
         });
     </script>
 </body>
