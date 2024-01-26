@@ -126,8 +126,13 @@ p.indent {
 /* For links in the document */
 a {
 	/* Prevent colorization or decoration */
-	text-decoration: none;
+	text-decoration: underline;
 	color: black;
+}
+a:hover {
+	/* Prevent colorization or decoration */
+	text-decoration: underline;
+	color: blue;
 }
 /* For tables in the document */
 table {
