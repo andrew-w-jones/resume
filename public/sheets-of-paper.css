@@ -126,7 +126,7 @@ p.indent {
 /* For links in the document */
 a {
 	/* Prevent colorization or decoration */
-	text-decoration: none;
+	text-decoration: underline;
 	color: blue;
 }
 a:hover {
