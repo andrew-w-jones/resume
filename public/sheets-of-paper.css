@@ -71,7 +71,7 @@ div.page-break {
 		/* Create the bottom page margin on the upper virtual page (minus the height of the pseudo element) */
 		margin-top: 1.2cm;
 		/* Create the top page margin on the lower virtual page */
-		margin-bottom: 2cm;
+		margin-bottom: 1cm;
 		/* Let this page appear as empty space between the virtual pages */
 		background: #eee;
 	}
