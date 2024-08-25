@@ -241,7 +241,7 @@ if (postsArray.length < 2) {
     relativePath +
     "/" +
     prevlink +
-    '">Previous Post \u00BB</a>';
+    '">Next Post \u00BB</a>';
 } else if (currentIndex === postsArray.length - 1) {
   nextlink = postsArray[currentIndex - 1][0];
   nextprevHTML =
@@ -249,7 +249,7 @@ if (postsArray.length < 2) {
     relativePath +
     "/" +
     nextlink +
-    '">\u00AB Next Post</a> | <a href="' +
+    '">\u00AB Previous Post</a> | <a href="' +
     relativePath +
     '/index.html">Home</a>';
 } else if (0 < currentIndex && currentIndex < postsArray.length - 1) {
@@ -260,13 +260,13 @@ if (postsArray.length < 2) {
     relativePath +
     "/" +
     nextlink +
-    '">\u00AB Next Post</a> | <a href="' +
+    '">\u00AB Previous Post</a> | <a href="' +
     relativePath +
     '/index.html">Home</a> | <a href="' +
     relativePath +
     "/" +
     prevlink +
-    '">Previous Post \u00BB</a>';
+    '">Next Post \u00BB</a>';
 }
 
 //-----------------------------
